@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(254, 88%, 90%);
+    font-size: 18px;
+}
+
+img{
+    width: 100%;
+}
+
+h2{
+    font-size: clamp(2.7rem, 3rem, 30.5rem);
+    font-weight: 500;
+}
+
+h3{
+    font-size: clamp(1.7rem, 2rem, 2.5rem);
+    font-weight: 600;
+}
+
+span{
+    color: hsl(39, 100%, 71%);
+}
+
+.grid-container{
+    margin: 2rem auto;
+    width: 90%;
+    display: grid;
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven"
+    "eight"
+    ;
+    gap: 1.5rem;
+}
+
+.grid-item{
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+}
+
+.one{
+    background-color: hsl(256, 67%, 59%);
+    color: white;
+    text-align: center;
+
+    grid-area: one;
+}
+
+.stars{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+}
+
+.two{
+    background-color: #fff;
+
+    grid-area: two;
+}
+
+.three{
+    background-color: hsl(39, 100%, 71%);
+    padding: 1.5rem 1.5rem 0 1.5rem;
+
+    grid-area: three;
+    overflow: hidden;
+}
+
+.calender-img{
+    margin-top: 0.5rem;
+    width: 70%;
+}
+
+.four{
+    text-align: center;
+    background-color: hsl(256, 52%, 80%);
+
+    grid-area: four;
+}
+
+.calender-schedule-img{
+    margin: 0.5rem 0;
+}
+
+.five{
+    background-color: hsl(256, 67%, 59%);
+    color: #fff;
+    text-align: center;
+
+    grid-area: five;
+}
+
+.five > h3{
+    width: 14ch;
+    margin: 0 auto;
+}
+
+.followers-graph-img{
+    width: 70%;
+    margin-bottom: 0.5rem;
+}
+
+.six{
+    background-color: #fff;
+
+    grid-area: six;
+}
+
+.six > p{
+    margin: 1rem;
+}
+
+.avatar-imgs{
+    width: 70%;
+}
+
+.seven{
+    background-color: hsl(31, 66%, 93%);
+
+    grid-area: seven;
+}
+
+.quicker{
+    color: hsl(256, 67%, 59%);
+}
+
+.create-btn-img{
+    margin-top: 1rem;
+    width: 70%;
+}
+
+.eight{
+    background-color: hsl(39, 100%, 71%);
+
+    grid-area: eight;
+}
+
+.ai-content-img{
+    margin-top: 1rem;
+    width: 70%;
+}
+
+@media (min-width: 550px) and (max-width: 750px) {
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "one two"
+        "three three"
+        "four four"
+        "five five"
+        "six seven"
+        "eight eight"
+        ;
+    }
+
+    .two{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .three, .four, .five, .eight{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .sns-img{
+        width: 300px;
+        margin-left: auto;
+    }
+
+    .calender-img{
+        width: 50%;
+    }
+
+    .four{
+        align-items: center;
+        text-align: left;
+    }
+
+    .calender-schedule-img{
+        width: 50%;
+    }
+
+    .five{
+        align-items: center;
+    }
+
+    .followers-graph-img{
+        width: 50%;
+    }
+
+    .eight{
+        align-items: center;
+    }
+
+    .ai-content-img{
+        width: 40%;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 1000px) {
+    .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "one one two"
+        "three six seven"
+        "four five five"
+        "four eight eight"
+        ;
+    }
+
+    .two, .five{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .four{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .two{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .followers-graph-img{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1001px) {
+
+    .grid-container{
+        width: 80%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 350px 250px 250px;
+        grid-template-areas: 
+        "seven one one four"
+        "eight two three four"
+        "eight six five five"
+        ;
+    }
+
+    .one{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2{
+        font-size: 3.5rem;
+    }
+
+    h3{
+        font-size: 2.5rem;
+        line-height: 0.8;
+    }
+
+    .stars{
+        max-width: 70%;
+    }
+
+    .two{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .sns-img{
+        width: 300px;
+        margin-left: auto;
+    }
+
+    .two > h3{
+        font-size: 2.2rem;
+    }
+
+    .three > h3{
+        font-size: 2.2rem;
+    }
+
+    .calender-img{
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .four{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .four > h3{
+        font-size: 2.2rem;
+    }
+
+    .calender-schedule-img{
+        width: 420px;
+        margin: 1rem 0;
+        margin-left: auto;
+    }
+
+    .five{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-align: left;
+    }
+
+    .followers-graph-img{
+        width: 40%;
+    }
+
+    .seven{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .create-btn-img{
+        width: 100%;
+    }
+
+    .eight{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .ai-content-img{
+        width: 100%;
+    }
+
+}
